@@ -1,0 +1,8 @@
+FROM aju121/node:v1
+WORKDIR /app
+COPY back.zip /app/
+RUN unzip back.zip
+RUN rm -rf back.zip
+RUN npm install
+EXPOSE 5000
+CMD ["npm","start"]
